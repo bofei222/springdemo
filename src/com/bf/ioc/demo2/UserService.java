@@ -6,4 +6,6 @@ package com.bf.ioc.demo2;
  */
 public interface UserService {
     void sayHello();
+
+
 }

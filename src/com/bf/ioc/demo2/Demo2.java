@@ -23,8 +23,13 @@ public class Demo2 {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService us = ac.getBean("userService", UserService.class);
         us.sayHello();
+    }
 
+    @Test
+    public void run3() {
 
     }
+
+
 
 }
