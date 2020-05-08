@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @date 2018/9/18 15:52
  */
 public class Demo2 {
-
+    private RestTemplate restTemplate;
     @Test
     public void run1() {
         UserService us = new UserServiceImpl();
@@ -27,7 +27,9 @@ public class Demo2 {
 
     @Test
     public void run3() {
-
+        ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
+        UserService us = ac.getBean("userService", UserService.class);
+        us.sayHello();
     }
 
 
